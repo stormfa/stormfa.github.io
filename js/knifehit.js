@@ -121,10 +121,8 @@ class playGame extends Phaser.Scene {
 
 						//v1.1 判断当前飞刀与圆木上的刀是否在约束范围之内
 						if (Math.abs(Phaser.Math.Angle.ShortestBetween(this.target.angle, children[i].impactAngle)) < gameOptions.minAngle) {
-
 							//v1.1 确定标记参数
 							legalHit = false;
-
 							//v1.1 一旦在约束范围内就停止
 							break;
 						}
