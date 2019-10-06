@@ -351,6 +351,8 @@ function jumpStart() {
   var h = boxs[0].bog.d_d.len * 200 + Math.min(focusPower, 500);
   poi.animations.play('j', 15000 / (h + 300) >> 0);
   var tw = game.add.tween(poi);
+	console.log(Math.min(focusPower, 500));
+  // tw.to({ x: Math.min(focusPower, 500) }, 250 + h / 1.5, ease.Linear.None);
   tw.to({ x: nextPoi.x }, 250 + h / 1.5, ease.Linear.None);
   tw.onComplete.addOnce(jumpOver);
   var tw2 = game.add.tween(poi);
